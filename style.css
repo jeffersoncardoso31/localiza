@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+#header{
+    max-height: 650px;
+}
+.container-desktop{
+    width: 60vw;
+    margin: auto;
+    height: 250px;
+    position: relative;
+}
+.lista-desktop{
+    display: flex;
+}
+.lista-desktop li{
+    list-style: none;
+    text-align: center;
+}
+.lista-desktop li:nth-child(1){
+    background-color: #004521;
+    border-top-left-radius: 10px;
+}
+.lista-desktop li:nth-child(2){
+    background-color: #00586F;
+}
+.lista-desktop li:nth-child(3){
+    background-color: #FB8322;
+}
+.lista-desktop li:nth-child(4){
+    background-color: #78DE1F;
+}
+.lista-desktop li:nth-child(5){
+    background-color: #5AD893;
+}
+.lista-desktop li:not(:nth-child(6)){
+    width: 200px;
+}
+.lista-desktop li:nth-child(6){
+    width: 100px;
+}
+.links{
+    text-decoration: none;
+    font-size: .24rem;
+    color: white;
+}
+.lista-desktop a{
+    position: relative;
+    top: -23px;
+}
+.lista-desktop li:nth-child(n + 4) a{
+    color: black;
+}
+.menus-desktop{
+    position: absolute;
+    width: 100%;
+    top: 37px;
+    z-index: 1;
+}
+.menu-desktop{
+    height: 80px;
+    background-color: #01602A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-desktop img{
+    width: 150px;
+}
+.links-desktop{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+}
+.menu-desktop li{
+    list-style: none;
+    position: relative;
+    top: -10px;
+}
+.login{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.menu-reserva{
+    background-color: #004521;
+    height: 110px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+}
+.menu-reserva input{
+    width: 500px;
+    border-radius: 5px;
+    font-size: .3rem;
+    padding: 18px 0;
+    border: none;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-indent: .3rem;
+}
+.menu-reserva form{
+    margin-left: 30px;
+}
+.menu-reserva input:nth-child(n + 2){
+    width: 150px;
+    text-indent: .1rem;
+}
+.menu-reserva input:nth-child(3){
+    text-indent: .3rem;
+}
+.menu-reserva input:focus{
+    border: none;
+    outline-offset: none;
+    outline:none;
+}
+.banner{
+    background-color: black;
+    height: 600px;
+    width: 100vw;
+    position: relative;
+    top: -213px;
+    /* overflow: hidden; */
+}
+.imagens{
+    width: 400%;
+    height: 100%;
+    background-color: red;
+}
+.imagem{
+    display: inline-block;
+    width: 100vw;
+    margin-right: -13px;
+    transition: .3s;
+}
+.imagem img{
+    height: 600px;
+    width: 100%;
+}
+.setas{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.seta-esquerda, .seta-direita{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #78DE1F;
+    cursor: pointer;
+    transition: .5s;
+}
+.seta{
+    color: #004521;
+}
+.seta span::before{
+    content: '';
+    width: 12px;
+    height: 2px;
+    display: block;
+    background-color: currentColor;
+    position: relative;
+    rotate: 45deg;
+    top: -3px;
+}
+.seta span::after{
+    content: '';
+    width: 12px;
+    height: 2px;
+    display: block;
+    background-color: currentColor;
+    position: relative;
+    rotate: -45deg;
+    top: 3px;
+}
+.seta-direita:hover, .seta-esquerda:hover{
+    background-color: #78DE1F;
+}
+.seta-direita:hover span, .seta-esquerda:hover span{
+    color: white;
+    transition: .5s;
+}
+.seta-esquerda{
+    rotate: 180deg;
+}
+.setas img{
+    width: 30px;
+}
+.menu-responsivo{
+    display: none;
+}
+@media only screen and (max-width: 1800px) {
+    .container-desktop{
+        width: 70vw;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .container-desktop{
+        width: 80vw;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .container-desktop{
+        width: 90vw;
+    }
+}
+@media only screen and (max-width: 1196px) {
+    .banner{
+        display: none;
+    }
+    .container-desktop{
+        display: none;
+    }
+    .menu-responsivo{
+        display: flex;
+        background-color: #05662B;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-responsivo img{
+        width: 130px;
+    }
+   
+
+}
+
+
